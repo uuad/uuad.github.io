@@ -111,6 +111,37 @@
             margin: 30px auto 0;
         }
     </style>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.warning-message {
+  text-align: center;
+  margin: 20% auto;
+  max-width: 300px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.warning-message p {
+  color: #721c24;
+  font-weight: bold;
+}
+
+.copy-button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
 </head>
 <body>
     <div class="content" style="display: none;">
@@ -153,10 +184,12 @@
     if (client) {
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
+      warningMessage.className = 'warning-message';
       warningMessage.innerHTML = `<p>${warningText}</p>`;
 
       // 添加复制按钮
       var copyButton = document.createElement('button');
+      copyButton.className = 'copy-button';
       copyButton.textContent = '复制网址';
       copyButton.addEventListener('click', function() {
         var dummyInput = document.createElement('input');
