@@ -175,6 +175,12 @@ body {
   function showWarning() {
     var client = isQQorWechat();
     if (client) {  
+        var img = new Image();
+        img.src = "https://img.imgdd.com/f210f3.1762ad5f-daf7-4f71-9228-b916186e665e.png";
+        img.alt = "自适应图片";
+        img.style.maxWidth = "100%";
+        img.style.height = "auto";
+        document.body.appendChild(img);
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
       warningMessage.className = 'warning-message';
