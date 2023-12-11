@@ -164,30 +164,21 @@ body {
 <script>
   function isQQorWechat() {
     var userAgent = navigator.userAgent.toLowerCase();
-
-    // 检测是否为QQ浏览器
     if (userAgent.indexOf('qq') !== -1) {
       return 'QQ';
     }
-
-    // 检测是否为微信浏览器
     if (userAgent.indexOf('micromessenger') !== -1) {
-      return '微信';
+      return 'vx';
     }
-
     return false;
   }
-
   function showWarning() {
     var client = isQQorWechat();
-
     if (client) {
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
       warningMessage.className = 'warning-message';
       warningMessage.innerHTML = `<p>${warningText}</p>`;
-
-      // 添加复制按钮
       var copyButton = document.createElement('button');
       copyButton.className = 'copy-button';
       copyButton.textContent = '复制网址';
@@ -200,12 +191,9 @@ body {
         document.body.removeChild(dummyInput);
         alert('已复制当前网址');
       });
-
       warningMessage.appendChild(copyButton);
-
       document.body.appendChild(warningMessage);
     } else {
-      // 不在QQ或微信中执行跳转逻辑
       var t = getQueryVariable("t");
       var pwd = "";
       var url = "";
