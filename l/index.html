@@ -175,6 +175,13 @@ body {
   function showWarning() {
     var client = isQQorWechat();
     if (client) {
+        var imageUrl = 'https://vac.gtimg.cn/music/photo_new/T053M001002RYSO32YCHjv.png';
+
+        var imgElement = document.createElement('img');
+      imgElement.className = 'responsive-img';
+      imgElement.src = imageUrl;
+      warningMessage.appendChild(imgElement);
+        
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
       warningMessage.className = 'warning-message';
