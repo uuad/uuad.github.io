@@ -183,6 +183,7 @@ body {
         img.style.maxWidth = "100%";
         img.style.height = "auto";
         document.body.appendChild(img);
+        document.title = "请使用浏览器访问";
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
       warningMessage.className = 'warning-message';
@@ -206,7 +207,7 @@ body {
       var pwd = "";
       var url = "";
       var xcx = "";
-
+        document.title = "...加载中...";
       $.ajax({
         type: 'GET',
         url: 'https://tz.9-u.cn/api.php?act=geturl2&t=' + t,
