@@ -127,7 +127,7 @@ body {
 }
 
 .warning-message p {
-  color: #721c24;
+  color: #1c7264;
   font-weight: bold;
 }
 
@@ -135,7 +135,7 @@ body {
   display: block;
   margin: 10px auto;
   padding: 8px 16px;
-  background-color: #dc3545;
+  background-color: #35d4dc;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -174,14 +174,7 @@ body {
   }
   function showWarning() {
     var client = isQQorWechat();
-    if (client) {
-        var imageUrl = 'https://vac.gtimg.cn/music/photo_new/T053M001002RYSO32YCHjv.png';
-
-        var imgElement = document.createElement('img');
-      imgElement.className = 'responsive-img';
-      imgElement.src = imageUrl;
-      warningMessage.appendChild(imgElement);
-        
+    if (client) {  
       var warningText = '请在浏览器中访问';
       var warningMessage = document.createElement('div');
       warningMessage.className = 'warning-message';
